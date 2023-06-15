@@ -5,7 +5,7 @@ public:
         vector<int> answer;
         for (int d : nums)
         {
-            answer.push_back(pow(d, 2));
+            answer.push_back(d * d);
         }
         sort(answer.begin(), answer.end());
         return answer;

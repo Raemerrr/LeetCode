@@ -1,15 +1,13 @@
 class Solution {
 public:
     int removeElement(vector<int> &nums, int val) {
-        const int MAX = 101;
-        int answer = nums.size();
+        int cnt = 0;
         for (int &d : nums) {
-            if (d == val) {
-                d = MAX;
-                answer--;
+            if (d != val) {
+                nums[cnt] = d;
+                cnt++;
             }
         }
-        sort(nums.begin(), nums.end());
-        return answer;
+        return cnt;
     }
 };
